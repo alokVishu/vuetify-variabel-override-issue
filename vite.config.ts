@@ -8,12 +8,17 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineConfig({
   plugins: [
     vue(),
-    vuetify({ styles: { configFile: 'src/styles/settings.scss' } }),
-    // vuetify({ styles: 'expose' }),
+    vuetify({
+      autoImport: true,
+      styles: {
+        configFile: './src/styles/variables/_vuetify.scss',
+      },
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@core': fileURLToPath(new URL('./src/@core', import.meta.url)),
     }
   }
 })

@@ -1,0 +1,18 @@
+@forward "vuetify/lib/styles/settings" with (
+  // 👉 General settings
+  $color-pack: false !default,
+  $body-font-family: "Inter" !default,
+  $border-radius-root: 6px !default,
+);
+
+@forward "vuetify/dist/component-variables" with (
+  $card-color: rgba(var(--v-theme-on-surface), var(--v-medium-emphasis-opacity)) !default,
+  $card-elevation: 6 !default,
+  $card-title-line-height: 1.6 !default,
+  $card-actions-min-height: unset !default,
+  $card-text-padding: 200px !default,
+  $card-item-padding: 15px 20px !default,
+  $card-actions-padding: 0 12px 12px !default,
+  $card-title-letter-spacing: 0.0094rem !default,
+  $card-subtitle-opacity: 1 !default,
+);
